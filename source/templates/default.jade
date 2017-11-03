@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/index.css')
+    title Simple Node.js App
+  body
+    .header
+      //- h1.page-title Simple Node.js App
+      div.jumbotron.jumbotron-fluid
+        div.container
+          h1.display-3 Simple Node.js App
+    h3 Node.js, jade, sass, bootstrap 4
+    //- Using bootstrap styling
+    blockquote.blockquote This project is currently importing the Bootstrap 4 sass files which can be themed and extended by editing the <code>stylessheets/index.scss</code> file.
+      footer.blockquote-footer blockquote using bootstrap 4
+    
+    // Only specifying a class will create a div with the specified class name
+    .main-content
+      block content
+      button(type="button" class="btn btn-primary") Click me!
+    .footer
+      p Copyright © 2017 Barny's Pub
+    script( src="/reload/reload.js") 

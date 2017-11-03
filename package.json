@@ -1,0 +1,27 @@
+{
+  "name": "pacific-west-LLC",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "main": "server.js",
+  "scripts": {
+    "build-css": "node-sass source/stylesheets/index.scss --use autoprefixer --output-style compressed -o static/css",
+    "watch-css": "node-sass source/stylesheets/index.scss --use autoprefixer -o static/css -w",
+    "clean": "rm -rf static/css && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run build-css && npm run watch-css & nodemon server -e js,jade",
+    "start": "node server"
+  },
+  "author": "Brendan Hytrek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.9.1"
+  },
+  "devDependencies": {
+    "reload": "^2.2.2"
+  }
+}
